@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário de Perfil do Aluno de Inglês</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #2563eb);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 15px;
+      font-size: 2.3rem;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: -30px auto 50px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    .intro {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      border-radius: 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #ffffff;
+    }
+
+    textarea {
+      min-height: 95px;
+      resize: vertical;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      margin: 0;
+      font-weight: normal;
+      background: #f8fafc;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .checkbox-group input {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 30px;
+      padding: 16px;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #15803d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .grid, .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aulas Personalizadas de Conversação em Inglês</h1>
+    <p>Preencha este formulário para que suas aulas sejam preparadas de acordo com sua rotina, profissão, objetivos e principais necessidades com o inglês.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="intro">
+        <strong>Objetivo do formulário:</strong> entender o perfil do aluno para criar aulas de conversação mais úteis, práticas e personalizadas.
+      </div>
+
+      <form id="studentForm">
+        <div class="grid">
+          <div>
+            <label for="nome">1. Qual é o seu nome completo?</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div>
+            <label for="idade">2. Qual é a sua idade?</label>
+            <input type="text" id="idade" name="idade">
+          </div>
+        </div>
+
+        <label for="cidade">3. Em qual país e cidade você mora atualmente?</label>
+        <input type="text" id="cidade" name="cidade">
+
+        <label for="nivel">4. Como você descreveria seu nível de inglês?</label>
+        <select id="nivel" name="nivel">
+          <option value="">Selecione uma opção</option>
+          <option>A1 - Iniciante</option>
+          <option>A2 - Básico</option>
+          <option>B1 - Intermediário</option>
+          <option>B2 - Intermediário avançado</option>
+          <option>C1 - Avançado</option>
+          <option>C2 - Proficiente</option>
+          <option>Não sei informar</option>
+        </select>
+
+        <label for="tempoEstudo">5. Há quanto tempo você estuda inglês? Como costuma estudar?</label>
+        <textarea id="tempoEstudo" name="tempoEstudo"></textarea>
+
+        <label for="profissao">6. Qual é a sua profissão? Descreva brevemente suas principais atividades no trabalho.</label>
+        <textarea id="profissao" name="profissao"></textarea>
+
+        <label for="inglesTrabalho">7. Você precisa usar inglês no trabalho? Em quais situações?</label>
+        <textarea id="inglesTrabalho" name="inglesTrabalho"></textarea>
+
+        <label for="objetivos">8. Quais são seus principais objetivos com o inglês?</label>
+        <textarea id="objetivos" name="objetivos" placeholder="Ex.: trabalho, viagens, imigração, entrevistas, faculdade, negócios, conversação..."></textarea>
+
+        <label for="situacoes">9. Quais situações reais de conversação você mais gostaria de praticar?</label>
+        <textarea id="situacoes" name="situacoes"></textarea>
+
+        <label>10. Quais habilidades você deseja desenvolver?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="skills" value="Speaking"> Speaking</label>
+          <label><input type="checkbox" name="skills" value="Listening"> Listening</label>
+          <label><input type="checkbox" name="skills" value="Pronunciation"> Pronunciation</label>
+          <label><input type="checkbox" name="skills" value="Vocabulary"> Vocabulary</label>
+          <label><input type="checkbox" name="skills" value="Grammar"> Grammar</label>
+          <label><input type="checkbox" name="skills" value="Reading/Writing"> Reading/Writing</label>
+        </div>
+
+        <label for="dificuldades">11. Quais são suas maiores dificuldades ao falar inglês?</label>
+        <textarea id="dificuldades" name="dificuldades"></textarea>
+
+        <label for="assuntosGosta">12. Quais assuntos você mais gosta de conversar?</label>
+        <textarea id="assuntosGosta" name="assuntosGosta" placeholder="Ex.: hobbies, esportes, tecnologia, filmes, negócios..."></textarea>
+
+        <label for="assuntosEvitar">13. Quais assuntos você prefere evitar durante as aulas?</label>
+        <textarea id="assuntosEvitar" name="assuntosEvitar"></textarea>
+
+        <label for="vocabulario">14. Você precisa aprender vocabulário específico da sua profissão? Se sim, cite exemplos.</label>
+        <textarea id="vocabulario" name="vocabulario"></textarea>
+
+        <label for="prova">15. Você pretende fazer alguma prova de inglês? Qual e quando?</label>
+        <textarea id="prova" name="prova"></textarea>
+
+        <label for="frequencia">16. Com que frequência você pretende ter aulas?</label>
+        <input type="text" id="frequencia" name="frequencia">
+
+        <label for="estudo">17. Quanto tempo você consegue dedicar aos estudos entre as aulas?</label>
+        <input type="text" id="estudo" name="estudo">
+
+        <label for="observacoes">18. Existe alguma necessidade especial, meta ou informação importante que o professor deve conhecer?</label>
+        <textarea id="observacoes" name="observacoes"></textarea>
+
+        <button type="button" onclick="enviarWhatsApp()">Enviar respostas pelo WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © Aulas Personalizadas de Inglês | Formulário de Perfil do Aluno
+  </footer>
+
+  <script>
+    function enviarWhatsApp() {
+      const form = document.getElementById("studentForm");
+      const data = new FormData(form);
+
+      const skills = [];
+      document.querySelectorAll('input[name="skills"]:checked').forEach(item => {
+        skills.push(item.value);
+      });
+
+      let mensagem = `Novo formulário de aluno:%0A%0A`;
+      mensagem += `Nome: ${data.get("nome")}%0A`;
+      mensagem += `Idade: ${data.get("idade")}%0A`;
+      mensagem += `Cidade/País: ${data.get("cidade")}%0A`;
+      mensagem += `Nível de inglês: ${data.get("nivel")}%0A`;
+      mensagem += `Tempo de estudo: ${data.get("tempoEstudo")}%0A`;
+      mensagem += `Profissão: ${data.get("profissao")}%0A`;
+      mensagem += `Uso do inglês no trabalho: ${data.get("inglesTrabalho")}%0A`;
+      mensagem += `Objetivos: ${data.get("objetivos")}%0A`;
+      mensagem += `Situações para praticar: ${data.get("situacoes")}%0A`;
+      mensagem += `Skills: ${skills.join(", ")}%0A`;
+      mensagem += `Dificuldades: ${data.get("dificuldades")}%0A`;
+      mensagem += `Assuntos de interesse: ${data.get("assuntosGosta")}%0A`;
+      mensagem += `Assuntos a evitar: ${data.get("assuntosEvitar")}%0A`;
+      mensagem += `Vocabulário profissional: ${data.get("vocabulario")}%0A`;
+      mensagem += `Prova de inglês: ${data.get("prova")}%0A`;
+      mensagem += `Frequência de aulas: ${data.get("frequencia")}%0A`;
+      mensagem += `Estudo entre aulas: ${data.get("estudo")}%0A`;
+      mensagem += `Observações: ${data.get("observacoes")}%0A`;
+
+      const numeroWhatsApp = "5512991051218";
+      const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
